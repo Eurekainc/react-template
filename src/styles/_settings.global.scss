@@ -1,0 +1,28 @@
+///* ========================================================================
+//   #GLOBAL
+//   ======================================================================== */
+// The global settings file contains any project-wide variables; things that
+// need to be made available to the entire codebase.
+
+// Standardise some UI treatments.
+$global-radius: 3px;
+
+$global-transition: all 300ms ease-in-out;
+
+$inuit-global-font-size:    16px;
+$inuit-global-line-height:  24px;
+$gap: $inuit-global-line-height;
+
+$font-weight-light: 300;
+
+$inuit-global-spacing-unit-factor-tiny:   0.15;
+$inuit-global-spacing-unit-factor-small:  0.5 ;
+$inuit-global-spacing-unit-factor-large:  2   ;
+$inuit-global-spacing-unit-factor-huge:   4   ;
+
+$inuit-ratios: (
+  (1:1),
+  (16:9)
+);
+
+$body-max-width: 1048px;

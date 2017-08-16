@@ -1,15 +1,14 @@
-Zurich Santander
+React-template
 
 Setup
 ---
-```
-npm install
-```
+Create your .env file from .env.example. Then run `yarn`
 
 
-
-Build
+Start
 ---
 ```
-npm run build
+yarn start
+or
+yarn startprod
 ```

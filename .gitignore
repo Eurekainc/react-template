@@ -1,2 +1,24 @@
+# Node
 node_modules
-client/bundle.js
+public/bundle.js
+npm-debug.log*
+
+# OS-Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Sass-Generated Files
+src/css/.sass-cache
+
+# Environment Variables
+.env
+
+# Test files
+coverage
+
+# Build files
+build
+.idea

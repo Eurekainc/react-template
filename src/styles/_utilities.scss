@@ -1,0 +1,64 @@
+$utilities: (
+  // Property                 Responsive?    Values
+  "float":                    true           left right none,
+  "clear":                    false          left right both,
+  "text-align":               true           center left right,
+  "text-decoration":          false          line-through none,
+  "font-weight":              false          100 300 400 600 700 800,
+  "margin-left":              false          auto,
+  "margin-right":             false          auto,
+  "position":                 false          absolute relative fixed,
+  "overflow":                 false          hidden,
+  "display":                  false          block inline-block inline none table table-cell,
+  "vertical-align":           false          middle bottom top,
+  "line-height":              false          33px,
+  "font-size":                false          12px,
+  "max-width":                false          640px 320px 75px 120px,
+  "width":                    false          1px 150px,
+  "right":                    false          0,
+  "cursor":                   false          pointer,
+  "border-radius":            false          3px
+);
+
+@each $i, $property in $utilities {
+
+  //
+  // @for statement starts with 2 in order to get ride of first value
+  // that is a responsive behaviour setting but not a valid declaration value.
+  //
+
+  @for $n from 2 through length($property) {
+    .u-#{$i}--#{nth($property, $n)} {
+      #{$i}: nth($property, $n);
+
+      @if nth($property, 1) == true {
+
+        @for $t from 1 through length($mq-breakpoints) {
+
+          &-at-#{nth(map-keys($mq-breakpoints), $t)} {
+            @include mq(nth(map-keys($mq-breakpoints), $t)) {
+              #{$i}: nth($property, $n);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+$cosmetics: color background-color fill;
+
+@for $i from 1 through length($palette) {
+  @each $c in $cosmetics {
+    .u-#{$c}--#{"" + nth(map-keys($palette), $i)} {
+      #{$c}: nth(map-values($palette), $i) !important;
+    }
+  }
+  .u-bc--#{"" + nth(map-keys($palette), $i)} {
+    @extend .u-background-color--#{"" + nth(map-keys($palette), $i)};
+  }
+}
+
+.u-border-radius {
+  border-radius: $global-radius;
+}

@@ -1,0 +1,52 @@
+
+input[type=text],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=time],
+input[type=url],
+input[type=week] {
+  padding: ($inuit-global-spacing-unit-small - 1) $inuit-global-spacing-unit;
+  vertical-align: middle;
+  border: 1px solid mix(palette("blue"), palette("lightgrey"), 50%);
+  outline: 0;
+  border-radius: $global-radius;
+
+  &::placeholder {
+    color: palette("blue");
+    font-weight: 100;
+  }
+}
+
+select {
+  line-height: 1.75;
+  padding: $inuit-global-spacing-unit-small $inuit-global-spacing-unit;
+  border-radius: $global-radius;
+}
+
+select:not([multiple]) {
+  vertical-align: middle;
+}
+
+textarea {
+  line-height: 1.75;
+  padding: $inuit-global-spacing-unit-small $inuit-global-spacing-unit;
+  border-radius: $global-radius;
+
+  &::placeholder {
+    color: palette("blue");
+    font-weight: 100;
+  }
+}
+
+button,
+input[type=submit] {
+  border: 0;
+  outline: 0;
+}

@@ -1,0 +1,34 @@
+body {
+  font-family: "Lato";
+  color: palette("text-color");
+  background-color: palette("lightgrey");
+  min-width: $body-max-width;
+}
+
+a {
+  color: palette("text-color");
+  text-decoration: none;
+
+  &:hover {
+    color: palette("text-color");
+  }
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-weight: 300;
+  }
+}
+
+input,
+select,
+textarea,
+fieldset {
+  font: inherit;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+label {
+  vertical-align: middle;
+}

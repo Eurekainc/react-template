@@ -1,0 +1,17 @@
+$red:         #EF4345;
+$text-color:  #444444;
+$lightgrey:   #F5F5F5;
+$white:       #ffffff;
+$blue:        #343E4B;
+
+$palette: (
+  "red":         $red,
+  "text-color":  $text-color,
+  "white":       $white,
+  "lightgrey":   $lightgrey,
+  "blue":        $blue
+);
+
+@function palette($some-color) {
+  @return map-get($palette, "#{$some-color}");
+}
