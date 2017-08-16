@@ -14,9 +14,7 @@ export default {
    * @param {String} key - The key to use
    * @returns {String} - The value from localStorage
    */
-  get: (key) => {
-    return localStorage[key]
-  },
+  get: key => localStorage[key],
 
   /**
    * Sets a key/value (object value only) pair in localStorage
@@ -32,7 +30,5 @@ export default {
    * @param {String} key - The key to use
    * @returns {Object} - The value from localStorage
    */
-  getObject: (key) => {
-    if (localStorage[key]) return JSON.parse(localStorage[key])
-  },
+  getObject: key => ((localStorage[key]) ? JSON.parse(localStorage[key]) : {}),
 }

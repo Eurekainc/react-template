@@ -2,7 +2,7 @@ import configureStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 import sinon from 'sinon'
 
-import browserStorage from '../helpers/local-storage-wrapper'
+import browserStorage from '../helpers/localStorageWrapper'
 
 const middlewares = [thunk]
 export const mockStore = configureStore(middlewares)

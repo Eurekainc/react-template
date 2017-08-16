@@ -1,4 +1,6 @@
-React-template
+#React-template
+
+This react template provides you with all the basic tools for developing a react app, using redux as your single source of truth.
 
 Setup
 ---

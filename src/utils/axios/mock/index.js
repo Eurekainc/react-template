@@ -6,6 +6,6 @@ export default (axios) => {
 
   mock.onGet(`${API}/path/to/mock`)
     .reply(200, {
-      'content': 'mocked response'
+      content: 'mocked response',
     })
 }

@@ -1,12 +1,10 @@
 import { combineReducers } from 'redux'
-import form, * as fromReduceForm from './reduceForm'
+import reducer, * as fromSampleReducer from './sampleReducer'
 
 const rootReducer = combineReducers({
-  form
+  reducer,
 })
 
 export default rootReducer
 
-export const formSelector = (state) => {
-  return fromReduceForm.specificFormSelector(state.form)
-}
+export const getRequestingState = state => fromSampleReducer.getRequestingState(state.reducer)

@@ -1,5 +1,5 @@
 import es from '../../locales/es.json'
-import browserStorage from '../helpers/local-storage-wrapper'
+import browserStorage from '../helpers/localStorageWrapper'
 
 export default class Dictionary {
   /**
@@ -21,7 +21,7 @@ export default class Dictionary {
 
   static messagesFromCurrentLocale() {
     const translations = {
-      es
+      es,
     }
 
     return translations[Dictionary.currentLocale()]

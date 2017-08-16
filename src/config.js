@@ -1,1 +1,3 @@
-export const API = `http://${process.env.ZS_API_URL}:${process.env.ZS_API_PORT}`
+const API = 'API_URL'
+
+export default API

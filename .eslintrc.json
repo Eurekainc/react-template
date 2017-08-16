@@ -5,7 +5,7 @@
         "jest": true,
         "node": true
     },
-    "extends": "eslint:recommended",
+    "extends": ["airbnb"],
     "parserOptions": {
         "ecmaFeatures": {
             "experimentalObjectRestSpread": true,
@@ -38,6 +38,8 @@
         "no-var": ["error"],
         "object-shorthand": ["error"],
         "prefer-const": ["error"],
-        "prefer-template": ["error"]
+        "prefer-template": ["error"],
+        "react/prefer-stateless-function": "off",
+        "import/no-extraneous-dependencies": "off"
     }
 }
