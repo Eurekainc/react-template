@@ -67,8 +67,8 @@
     "webpack-hot-middleware": "^2.18.2"
   },
   "scripts": {
-    "start": "node server.js",
-    "startprod": "NODE_ENV=production node server.prod.js",
+    "dev": "node server.js",
+    "prod": "NODE_ENV=production node server.prod.js",
     "build": "webpack --config ./config/webpack.config.js -p",
     "test": "./node_modules/.bin/jest --env=jsdom --coverage --no-cache",
     "eslint": "./node_modules/.bin/eslint ./src --ext .jsx --ext .js"

@@ -12,6 +12,12 @@ Setup & Start
 ---
 First, create your `.env` file from `.env.example`, specifying in which port will it run.
 
-Then run `yarn start` to start the server.
+Then run `yarn run dev` to start the development server.
 
-If you want to start the server with the production bundle, just run `yarn startprod`. (Note: include this in your Procfile if you want to deploy to heroku)
+If you want to start the server with the production bundle, run `yarn run prod` instead.
+
+Use `yarn build` to build your production bundle
+
+Use `yarn eslint` if you want to check your code with the linter
+
+Use `yarn test` if you want to run all tests and collect coverage.
