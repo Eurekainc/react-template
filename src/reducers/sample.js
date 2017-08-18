@@ -1,1 +1,1 @@
-export default (state = 'sample', action) => state;
+export default (state = 'sample', action) => (action ? state : 'other');
