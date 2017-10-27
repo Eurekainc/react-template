@@ -26,7 +26,27 @@ module.exports = {
   module: {
     rules: [
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.(svg|ttf|eot|woff(2)?)(\?[a-z0-9=&.]+)?$/, loader: 'file-loader' },
+      {
+        test: /\.css$/,
+        include: [/main.css/],
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
+      },
+      {
+        test: /\.css$/,
+        exclude: [/node_modules/, /main.css/],
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              importLoaders: 1,
+              localIdentName: '[folder]_[local]_[hash:base64:5]',
+            },
+          },
+          'postcss-loader',
+        ],
+      },
     ],
   },
 };
