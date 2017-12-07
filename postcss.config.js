@@ -1,4 +1,4 @@
-/module.exports = {
+module.exports = {
   parser: 'postcss-scss',
   sourceMap: 'inline',
   plugins: {
