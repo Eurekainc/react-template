@@ -1,6 +1,6 @@
-const webpack = require('webpack');
-const path = require('path');
-const HtmlWebpackPlugion = require('html-webpack-plugin');
+const webpack = require('webpack')
+const path = require('path')
+const HtmlWebpackPlugion = require('html-webpack-plugin')
 
 module.exports = {
   devtool: 'inline-source-map',
@@ -29,4 +29,4 @@ module.exports = {
       { test: /\.(svg|ttf|eot|woff(2)?)(\?[a-z0-9=&.]+)?$/, loader: 'file-loader' },
     ],
   },
-};
+}

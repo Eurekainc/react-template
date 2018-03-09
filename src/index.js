@@ -1,15 +1,11 @@
-import React from 'react';
-import { Provider } from 'react-redux';
-import { render } from 'react-dom';
+import React from 'react'
+import {
+  render,
+} from 'react-dom'
 
-import buildStore from './buildStore';
-import App from './components/App';
-
-const store = buildStore();
+import App from './containers/App'
 
 render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <App />,
   document.getElementById('root'),
-);
+)
